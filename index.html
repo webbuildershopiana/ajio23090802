@@ -66,7 +66,7 @@
 
 <style type="text/css">
 
-* { box-sizing: border-box; } body {margin: 0;}.test-class{background-color:gray;color:white;}#test-heading-2{background-color:red;font-size:20px;}
+* { box-sizing: border-box; } body {margin: 0;}.test-class{background-color:gray;color:white;}#test-heading-2{background-color:red;font-size:20px;}#iip4{background-color:#053245;}#izw19{color:#d983a6;}
 
 </style>
 
@@ -80,11 +80,24 @@
   <div id="i605">
    <h1 id="test-heading-2" class="test-class">My test component</h1>
   </div>
-  <script>var items = document.querySelectorAll('#ihil, #i605');
+  <div id="i6eyx">
+   <h1 id="test-heading-3" class="test-class">My test component</h1>
+  </div>
+  <div id="i3t44">
+   <h1 id="test-heading-4" class="test-class">My test component</h1>
+  </div><a page="page://ZkIWhS0B3LVeSXLRy" name="Page 2" slug="page-2" href="//ajio-shopiana-webbuilder-production.vercel.app/page-2.html" link-type="page" id="izw19">Link</a>
+  <script>var items = document.querySelectorAll('#ihil, #i605, #i6eyx, #i3t44');
           for (var i = 0, len = items.length; i < len; i++) {
             (function(){
 // alert("Hi");
         console.log("Test file print ", this);
+        const headings = document.querySelectorAll('.test-class');
+        const changeHeading = function (e) {
+            e.target.innerHTML = 'HEADING CHANGE';
+        };
+        for (let i = 0; i < headings.length; i++) {
+            headings[i].addEventListener('click', changeHeading);
+        }
 }.bind(items[i]))();
           }</script>
  </body>

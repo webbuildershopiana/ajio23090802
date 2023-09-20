@@ -66,7 +66,7 @@
 
 <style type="text/css">
 
-* { box-sizing: border-box; } body {margin: 0;}
+* { box-sizing: border-box; } body {margin: 0;}.test-class{background-color:gray;color:white;}#iw0bp{color:black;}#test-heading-6{color:black;}#test-heading-5{color:yellow;}
 
 </style>
 
@@ -77,6 +77,26 @@
   <div>
    Main page
   </div>
+  <div id="ithi3">
+   <h1 id="test-heading-5" class="test-class">My test component</h1>
+  </div>
+  <div id="iw0bp">
+   <h1 id="test-heading-6" class="test-class">My test component</h1>
+  </div>
+  <script>var items = document.querySelectorAll('#ithi3, #iw0bp');
+          for (var i = 0, len = items.length; i < len; i++) {
+            (function(){
+// alert("Hi");
+        console.log("Test file print ", this);
+        const headings = document.querySelectorAll('.test-class');
+        const changeHeading = function (e) {
+            e.target.innerHTML = 'HEADING CHANGE';
+        };
+        for (let i = 0; i < headings.length; i++) {
+            headings[i].addEventListener('click', changeHeading);
+        }
+}.bind(items[i]))();
+          }</script>
  </body>
 </html>
 </html>
